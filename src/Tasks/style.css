@@ -1,0 +1,56 @@
+.taskList {
+    background-color: white;
+    padding: 15px;
+    margin: 1px 20px 1px 20px;
+    list-style: inside;
+}
+
+.taskList__task {
+    border-bottom: 1px solid #eee;
+    list-style-type: none;
+    padding: 5px;
+    font-size: 17px;
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+    align-items: center;
+}
+
+.list_taskText--lineThrough {
+    text-decoration:line-through;
+}
+
+.list__buttonDone {
+    background-color: green;
+    color: white;
+    height: 33px;
+    width: 33px;
+    border-style: none;
+    margin-right: 5px;
+}
+
+.list__buttonDone:hover {
+    background-color: rgb(1, 139, 1);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.list__buttonDone:active {
+    border: 2px solid black;
+}
+
+.list_buttonRemove {
+   float: right;
+   background-color: red;
+   height: 33px;
+   border-style: none;
+   cursor: pointer;
+}
+
+.list_buttonRemove:hover {
+    background-color: rgb(234, 89, 89);
+    transition: 1s;
+}
+
+.list_buttonRemove:active {
+    border: 2px solid black;
+}
