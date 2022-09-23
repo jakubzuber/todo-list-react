@@ -1,0 +1,16 @@
+#DO-DO List - React 
+
+## Demo
+
+
+##General info
+
+Simple to do list that help with managing tasks (add, delete, toggle done/undone).
+
+##Technologies
+
+Project was created with:
+
+HTML
+CSS (BEM, grid, media queries)
+JavaScript (React)
