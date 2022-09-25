@@ -13,6 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 15fr 1fr;
     align-items: center;
+    word-break: normal;
 }
 
 .list_taskText--lineThrough {
