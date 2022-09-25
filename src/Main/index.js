@@ -1,4 +1,4 @@
-import { Children } from "react"
+
 import "./style.css"
 
 const Main = ({children}) => (
