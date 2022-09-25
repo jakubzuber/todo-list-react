@@ -1,3 +1,22 @@
+# TO-DO List in React 
+
+## Demo
+
+https://jakubzuber.github.io/todo-list-react/
+
+## General info
+
+Simple to do list that help with managing tasks (add, delete, toggle done/undone).
+
+## Technologies
+
+Project was created with:
+
+HTML
+CSS (BEM, grid, media queries)
+JavaScript (React)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
