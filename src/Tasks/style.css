@@ -29,7 +29,7 @@
 }
 
 .list__buttonDone:hover {
-    background-color: rgb(1, 139, 1);
+    background-color: rgb(1, 161, 1);
     cursor: pointer;
     transition: 1s;
 }
@@ -47,7 +47,7 @@
 }
 
 .list_buttonRemove:hover {
-    background-color: rgb(234, 89, 89);
+    background-color: rgb(232, 118, 118);
     transition: 1s;
 }
 
