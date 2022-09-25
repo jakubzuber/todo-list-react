@@ -1,4 +1,6 @@
 
+import "./style.css"
+
 const Header = ({ titleHeader }) => (
   <header className="header">
     <h1>

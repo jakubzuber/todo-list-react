@@ -1,4 +1,5 @@
 
+import "./style.css"
 
 const Section = ({ title, headerButton, body }) => (
   <section className="section">

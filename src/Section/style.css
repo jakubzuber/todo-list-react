@@ -1,8 +1,3 @@
-.header {
-    margin-top: 35px;
-    margin-left: 20px;
-}
-
 .section {
     display: flex;
     flex-direction: column;
@@ -69,8 +64,4 @@
 .section__headerDoneButton:disabled {
     color: gray;
     cursor: not-allowed;
-}
-
-.taskList__task--hide {
-    display: none;
 }

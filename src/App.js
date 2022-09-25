@@ -18,7 +18,8 @@ function App() {
       <Section title="Dodaj nowe zadanie" body={<Form />} />
       <Section title="Lista zadań"
         headerButton={<Buttons tasks={tasks} hideTasksDone={hideTasksDone} />}
-        body={<Tasks tasks={tasks} hideTasksDone={hideTasksDone} />} />
+        body={<Tasks tasks={tasks} hideTasksDone={hideTasksDone} />}
+      />
     </Main>
   );
 }
