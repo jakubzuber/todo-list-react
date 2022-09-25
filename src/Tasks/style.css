@@ -39,7 +39,6 @@
 }
 
 .list_buttonRemove {
-    float: right;
     background-color: red;
     height: 33px;
     border-style: none;

@@ -14,7 +14,7 @@ const hideTasksDone = false;
 function App() {
   return (
     <Main>
-      <Header title2="Lista zadań" />
+      <Header titleHeader="Lista zadań" />
       <Section title="Dodaj nowe zadanie" body={<Form />} />
       <Section title="Lista zadań"
         headerButton={<Buttons tasks={tasks} hideTasksDone={hideTasksDone} />}

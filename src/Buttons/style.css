@@ -43,6 +43,7 @@
     border: none;
     color: teal;
     font-size: 15px;
+    padding: 5px;
 }
 
 .section__headerHideButton:hover {
@@ -56,6 +57,7 @@
     border: none;
     color: teal;
     font-size: 15px;
+    padding: 5px;
 }
 
 .section__headerDoneButton:hover {
@@ -66,6 +68,7 @@
 
 .section__headerDoneButton:disabled {
     color: gray;
+    cursor: not-allowed;
 }
 
 .taskList__task--hide {
