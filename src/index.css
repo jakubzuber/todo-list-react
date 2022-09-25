@@ -1,9 +1,8 @@
 html {
-  box-sizing:border-box; 
-  background-color: #eee;  
+  box-sizing: border-box;
+  background-color: #eee;
 }
 
 *, ::before, ::after {
   box-sizing: inherit;
 }
-

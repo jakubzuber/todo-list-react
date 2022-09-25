@@ -16,7 +16,7 @@
 }
 
 .list_taskText--lineThrough {
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
 
 .list__buttonDone {
@@ -39,11 +39,11 @@
 }
 
 .list_buttonRemove {
-   float: right;
-   background-color: red;
-   height: 33px;
-   border-style: none;
-   cursor: pointer;
+    float: right;
+    background-color: red;
+    height: 33px;
+    border-style: none;
+    cursor: pointer;
 }
 
 .list_buttonRemove:hover {

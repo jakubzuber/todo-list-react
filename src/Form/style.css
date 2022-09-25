@@ -9,7 +9,7 @@
 @media (max-width: 767px) {
     .form {
         grid-template-columns: 1fr;
-    } 
+    }
 }
 
 .form__input {
@@ -32,7 +32,7 @@
     padding: 8px;
     margin-left: 15px;
     border-style: none;
-    
+
 }
 
 @media (max-width: 767px) {
