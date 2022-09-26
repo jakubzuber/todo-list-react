@@ -9,7 +9,7 @@ const tasks = [
   { id: 1, content: "przejść na react'a", done: true },
   { id: 2, content: "zrobić placki", done: false },
 ];
-const hideTasksDone = false;
+const hideDone = false;
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
       <Header titleHeader="Lista zadań" />
       <Section title="Dodaj nowe zadanie" body={<Form />} />
       <Section title="Lista zadań"
-        headerButton={<Buttons tasks={tasks} hideTasksDone={hideTasksDone} />}
-        body={<Tasks tasks={tasks} hideTasksDone={hideTasksDone} />}
+        headerButton={<Buttons tasks={tasks} hideDone={hideDone} />}
+        body={<Tasks tasks={tasks} hideDone={hideDone} />}
       />
     </Main>
   );
