@@ -1,5 +1,9 @@
 # TO-DO List in React 
 
+## Screenshot
+
+![alt text for screen readers](/public/ssmd.png "Screen shot of to-do list").
+
 ## Demo
 
 https://jakubzuber.github.io/todo-list-react/
