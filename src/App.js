@@ -4,14 +4,22 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Main from "./Main";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+
+  const tasksRender = () => {
+    const localStorageTasks = localStorage.getItem("tasks");
+    return localStorageTasks ? JSON.parse(localStorageTasks) : []
+  };
+
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "zrobić obiad", done: true },
-    { id: 2, content: "pójść na trening", done: false },
-  ]);
+
+  const [tasks, setTasks] = useState(tasksRender);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone)
@@ -24,7 +32,7 @@ function App() {
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
       if (task.id === id) {
-        return {...task, done: !task.done};
+        return { ...task, done: !task.done };
       };
       return task;
     }));
@@ -40,7 +48,7 @@ function App() {
     setTasks(tasks => [
       ...tasks,
       {
-        content: newTaskContent, 
+        content: newTaskContent,
         done: false,
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
       }
@@ -51,8 +59,8 @@ function App() {
     <Main>
       <Header titleHeader="Lista zadań" />
       <Section title="Dodaj nowe zadanie" body={
-      <Form
-      addNewTask={addNewTask} />} />
+        <Form
+          addNewTask={addNewTask} />} />
       <Section title="Lista zadań"
         headerButton={
           <Buttons
