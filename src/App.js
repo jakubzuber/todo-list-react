@@ -8,14 +8,9 @@ import { useEffect, useState } from "react";
 
 function App() {
 
-  const tasksRender = () => {
-    const localStorageTasks = localStorage.getItem("tasks");
-    return localStorageTasks ? JSON.parse(localStorageTasks) : []
-  };
-
   const [hideDone, setHideDone] = useState(false);
 
-  const [tasks, setTasks] = useState(tasksRender());
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
