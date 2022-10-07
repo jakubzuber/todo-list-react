@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./style.css"
 import { MainForm, FormButton, FormInput } from "./styled"
 
 const Form = ({addNewTask}) => {
