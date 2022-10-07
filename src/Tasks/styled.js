@@ -1,11 +1,13 @@
-.taskList {
+import styled, { css } from "styled-components"
+
+export const List = styled.ul`
     background-color: white;
     padding: 15px;
     margin: 1px 20px 1px 20px;
     list-style: inside;
-}
+`;
 
-.taskList__task {
+export const Task = styled.li`
     border-bottom: 1px solid #eee;
     list-style-type: none;
     padding: 5px;
@@ -14,48 +16,50 @@
     grid-template-columns: 1fr 15fr 1fr;
     align-items: center;
     word-break: normal;
-}
 
-.list_taskText--done {
-    text-decoration: line-through;
-}
+    ${({ hide }) => hide && css`
+    display: none;
+    `}
+`;
 
-.list__buttonDone {
+export const ButtonDone = styled.button`
     background-color: green;
     color: white;
     height: 33px;
     width: 33px;
     border-style: none;
     margin-right: 5px;
-}
 
-.list__buttonDone:hover {
+    &:hover {
     background-color: rgb(1, 161, 1);
     cursor: pointer;
     transition: 1s;
-}
+    }
 
-.list__buttonDone:active {
+    &:active {
     border: 2px solid black;
-}
+    }
+`;
 
-.list_buttonRemove {
+export const ButtonRemove = styled.button`
     background-color: red;
     height: 33px;
     width: 33px;
     border-style: none;
     cursor: pointer;
-}
 
-.list_buttonRemove:hover {
+    &:hover {
     background-color: rgb(232, 118, 118);
     transition: 1s;
-}
+    }
 
-.list_buttonRemove:active {
+    &:active {
     border: 2px solid black;
-}
+    }
+`;
 
-.taskList__task--hide {
-    display: none;
-}
+export const TaskText = styled.span`
+    ${({done}) => done && css`
+    text-decoration: line-through;
+    `}
+`;
