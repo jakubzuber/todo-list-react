@@ -1,7 +1,7 @@
 import {MainField} from "./styled"
 
 const Main = ({children}) => (
-    <MainField className="main">
+    <MainField>
         {children}
     </MainField>
 )
