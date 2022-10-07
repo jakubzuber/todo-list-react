@@ -16,9 +16,7 @@ export const SectionTitle = styled.h2`
     grid-template-columns: 3fr 2fr;
 
     @media (max-width: 767px) {
-    .section__header {
         grid-template-columns: 1fr;
         text-align: center;
-    }
     }
 `;
