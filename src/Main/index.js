@@ -1,10 +1,9 @@
-
-import "./style.css"
+import {MainField} from "./styled"
 
 const Main = ({children}) => (
-    <main className="main">
+    <MainField className="main">
         {children}
-    </main>
+    </MainField>
 )
 
 export default Main;
