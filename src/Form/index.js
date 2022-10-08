@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { MainForm, FormButton, FormInput } from "./styled"
 
-const Form = ({addNewTask}) => {
+const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -11,18 +11,26 @@ const Form = ({addNewTask}) => {
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
     };
+    const inputRef = useRef(null)
 
+    const focusInput = () => {
+        inputRef.current.focus();
+    }
 
     return (
         <MainForm onSubmit={onFormSubmit}>
             <FormInput
+                ref={inputRef}
                 value={newTaskContent}
-                onChange={({target}) => setNewTaskContent(target.value)}
+                onChange={({ target }) => setNewTaskContent(target.value)}
                 type="text"
                 placeholder="Co jest do zrobienia?"
-                autoFocus={true}
+                autoFocus={true}  
             />
-            <FormButton>Dodaj zadanie</FormButton>
+            <FormButton
+            onClick={focusInput}
+            >
+                Dodaj zadanie</FormButton>
         </MainForm>
     );
 };
