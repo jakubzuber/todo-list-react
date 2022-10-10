@@ -18,48 +18,35 @@ export const Task = styled.li`
     word-break: normal;
 
     ${({ hide }) => hide && css`
-    display: none;
+        display: none;
     `}
 `;
 
-export const ButtonDone = styled.button`
-    background-color: green;
-    color: white;
+export const Button = styled.button`
     height: 33px;
     width: 33px;
     border-style: none;
-    margin-right: 5px;
+    cursor: pointer;
+    background-color: red;
 
     &:hover {
-    background-color: rgb(1, 161, 1);
-    cursor: pointer;
-    transition: 1s;
+        background-color: rgb(1, 161, 1);
+        transition: 1s;
     }
 
     &:active {
-    border: 2px solid black;
+        border: 2px solid black;
     }
 `;
 
-export const ButtonRemove = styled.button`
-    background-color: red;
-    height: 33px;
-    width: 33px;
-    border-style: none;
-    cursor: pointer;
-
-    &:hover {
-    background-color: rgb(232, 118, 118);
-    transition: 1s;
-    }
-
-    &:active {
-    border: 2px solid black;
-    }
+export const ButtonDone = styled(Button)`
+    background-color: green;
+    color: white;
+    margin-right: 5px;
 `;
 
 export const TaskText = styled.span`
     ${({done}) => done && css`
-    text-decoration: line-through;
+        text-decoration: line-through;
     `}
 `;
