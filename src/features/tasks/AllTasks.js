@@ -12,7 +12,7 @@ function AllTasks() {
   const [
 
     setAllDone,
-    removeTask,
+    //removeTask,
 
    ] = useTasks();
 
@@ -30,9 +30,7 @@ function AllTasks() {
             setAllDone={setAllDone}
           />}
         body={
-          <Tasks
-            removeTask={removeTask}
-          />}
+          <Tasks/>}
       />
     </Main>
   );
