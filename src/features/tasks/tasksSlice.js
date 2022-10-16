@@ -21,7 +21,7 @@ const tasksSlice = createSlice({
             const index = tasks.findIndex(task => task.id === payload)
             tasks.splice(index, 1)
         },
-        setAllDone: ({tasks}, action) => {
+        setAllDone: ({tasks}) => {
             for (const task of tasks)
                 {task.done = true}
         }
