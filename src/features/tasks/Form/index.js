@@ -1,12 +1,12 @@
 import { useState, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { nanoid } from "@reduxjs/toolkit";
+import { useDispatch, useSelector } from "react-redux";
 import { Main, Forms, Button } from "./styled";
-import { addTask } from "../tasksSlice";
+import { addTask, selectTasks } from "../tasksSlice";
 
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const { tasks } = useSelector(selectTasks)
     const inputRef = useRef(null);
     
     const dispatch = useDispatch();
@@ -16,11 +16,10 @@ const Form = () => {
         if (newTaskContent === "") {
             return
         }
-
         dispatch(addTask({
             content: newTaskContent,
             done: false,
-            id: nanoid(),
+            id: tasks.length === 0 ? 1 : tasks[tasks.length -1].id + 1
         }))
 
         setNewTaskContent("");
