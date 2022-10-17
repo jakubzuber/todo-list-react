@@ -1,12 +1,11 @@
 import { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Main, Forms, Button } from "./styled";
 import { addTask, selectTasks } from "../tasksSlice";
-
+import { Main, Forms, Button } from "./styled";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
-    const { tasks } = useSelector(selectTasks)
+    const tasks  = useSelector(selectTasks);
     const inputRef = useRef(null);
     
     const dispatch = useDispatch();
@@ -24,7 +23,6 @@ const Form = () => {
 
         setNewTaskContent("");
     };
-     
 
     const focusInput = () => {
         inputRef.current.focus();
