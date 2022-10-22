@@ -3,7 +3,7 @@ import Section from "../../common/Section";
 import { Main } from "../../styled";
 
 
-const Author = () => (
+const AuthorPage = () => (
     <Main>
         <Header titleHeader="O autorze" />
         <Section title="Jakub Zuber"
@@ -17,4 +17,4 @@ const Author = () => (
     </Main>
 );
 
-export default Author;
+export default AuthorPage;
