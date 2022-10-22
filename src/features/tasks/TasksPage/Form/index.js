@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTask, selectTasks } from "../tasksSlice";
+import { addTask, selectTasks } from "../../tasksSlice";
 import { Main, Forms, Button } from "./styled";
 
 const Form = () => {
