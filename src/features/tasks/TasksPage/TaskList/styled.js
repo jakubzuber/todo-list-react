@@ -1,12 +1,5 @@
 import styled, { css } from "styled-components"
 
-export const List = styled.ul`
-    background-color: white;
-    padding: 15px;
-    margin: 1px 20px 1px 20px;
-    list-style: inside;
-`;
-
 export const Task = styled.li`
     border-bottom: 1px solid #eee;
     list-style-type: none;

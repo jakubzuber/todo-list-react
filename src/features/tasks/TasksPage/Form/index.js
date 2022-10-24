@@ -1,15 +1,16 @@
 import { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask, selectTasks } from "../../tasksSlice";
-import { Main, Forms, Button } from "./styled";
+import { FormTable, Button } from "./styled";
+import Forms from "../../Input/index";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
-    const tasks  = useSelector(selectTasks);
+    const tasks = useSelector(selectTasks);
     const inputRef = useRef(null);
-    
+
     const dispatch = useDispatch();
-    
+
     const onFormSubmit = (event) => {
         event.preventDefault();
         if (newTaskContent === "") {
@@ -18,7 +19,7 @@ const Form = () => {
         dispatch(addTask({
             content: newTaskContent,
             done: false,
-            id: tasks.length === 0 ? 1 : tasks[tasks.length -1].id + 1
+            id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1
         }))
 
         setNewTaskContent("");
@@ -29,21 +30,23 @@ const Form = () => {
     }
 
     return (
-        <Main onSubmit={onFormSubmit}>
-            <Forms
-                ref={inputRef}
-                value={newTaskContent}
-                onChange={({ target }) => setNewTaskContent(target.value)}
-                type="text"
-                placeholder="Co jest do zrobienia?"
-                autoFocus={true}
-            />
-            <Button
-                onClick={focusInput}
-            >
-                Dodaj zadanie
-            </Button>
-        </Main>
+       
+            <FormTable onSubmit={onFormSubmit}>
+                <Forms
+                    ref={inputRef}
+                    value={newTaskContent}
+                    onChange={({ target }) => setNewTaskContent(target.value)}
+                    type="text"
+                    placeholder="Co jest do zrobienia?"
+                    autoFocus={true}
+                />
+                <Button
+                    onClick={focusInput}
+                >
+                    Dodaj zadanie
+                </Button>
+            </FormTable>
+       
     );
 };
 
