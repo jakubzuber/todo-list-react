@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask, selectTasks } from "../../tasksSlice";
 import { FormTable, Button } from "./styled";
-import Forms from "../../Input/index";
+import { Input } from "../../styled"
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
@@ -30,9 +30,8 @@ const Form = () => {
     }
 
     return (
-       
             <FormTable onSubmit={onFormSubmit}>
-                <Forms
+                <Input
                     ref={inputRef}
                     value={newTaskContent}
                     onChange={({ target }) => setNewTaskContent(target.value)}
@@ -46,7 +45,6 @@ const Form = () => {
                     Dodaj zadanie
                 </Button>
             </FormTable>
-       
     );
 };
 
