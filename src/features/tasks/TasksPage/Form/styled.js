@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const FormTable = styled.form`
-    background-color: white;
-    margin: 2px 20px 0px 20px;
-    padding: 10px;
     display: grid;
     grid-template-columns: 4fr 1fr;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
     `
+
 
 export const Button = styled.button`
     background-color: teal;

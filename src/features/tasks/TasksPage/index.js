@@ -5,6 +5,7 @@ import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import { Main } from "../styled";
 import Search from "../Search";
+import ExampleTasksButton from "./ExampleTasksButton";
 
 function TasksPage() {
   return (
@@ -12,6 +13,7 @@ function TasksPage() {
       <Header titleHeader="Lista zadań" />
       <Section title="Dodaj nowe zadanie"
         body={<Form />}
+        headerButton={<ExampleTasksButton />}
       />
       <Section title="Wyszukiwarka"
         body={<Search />}

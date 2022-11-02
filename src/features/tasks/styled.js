@@ -22,3 +22,29 @@ export const Input = styled.input`
     }
 `;
 
+export const Button = styled.button`
+    background-color: white;
+    border: none;
+    color: teal;
+    font-size: 15px;
+    padding: 5px;
+
+    &:hover {
+        color: rgb(1, 159, 159);
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    &:disabled {
+        color: gray;
+        cursor: not-allowed;
+    }
+`;
+
+export const MainLayout = styled.div`
+    background-color: white;
+    margin: 2px 20px 0px 20px;
+    padding: 10px;
+`;
+
+

@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useLocation } from "react-router-dom"
-import { Task, ButtonDone, Button, TaskText, Container } from "./styled"
+import { Task, ButtonDone, Button, TaskText } from "./styled"
+import { MainLayout } from "../../styled";
 import { selectHideDone, toggleTaskDone, removeTask, selectTasksByQuery } from "../../tasksSlice";
 
 const TaskList = () => {
@@ -14,9 +15,9 @@ const TaskList = () => {
     const dispatch = useDispatch();
 
     return (
-        <>
-            {tasks.map(task => (
-                <Container>
+        <MainLayout>
+            <>
+                {tasks.map(task => (
                     <Task key={task.id}
                         hide={hideDone && task.done}>
                         <ButtonDone
@@ -33,9 +34,9 @@ const TaskList = () => {
                             🗑
                         </Button>
                     </Task>
-                </Container>
-            ))}
-        </>
+                ))}
+            </>
+        </MainLayout>
     )
 };
 

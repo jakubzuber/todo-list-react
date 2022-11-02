@@ -3,7 +3,7 @@ import { SectionClass, SectionTitle } from "./styled"
 const Section = ({ title, headerButton, body }) => (
   <SectionClass>
       <SectionTitle>
-        {title}
+      {title}
         {headerButton}
       </SectionTitle>
     {body}
