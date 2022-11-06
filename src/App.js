@@ -1,7 +1,7 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom"
 import AuthorPage from "./features/AuthorPage/Author";
-import TasksPage from "./features/tasks/TasksPage";
-import TaskPage from "./features/tasks/TaskPage";
+import TasksList from "./features/TasksPage/TasksList";
+import TaskPage from "./features/TasksPage/TaskPage";
 import { StyledNavLink, StyledNavListItem, StyledNavList } from "./styled";
 
 const App = () => (
@@ -16,11 +16,11 @@ const App = () => (
         </StyledNavListItem>
       </StyledNavList>
       <Switch>
-      <Route path="/zadania/:id">
+        <Route path="/zadania/:id">
           <TaskPage />
         </Route>
         <Route path="/zadania">
-          <TasksPage />
+          <TasksList />
         </Route>
         <Route path="/autor">
           <AuthorPage />

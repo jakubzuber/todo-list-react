@@ -1,13 +1,13 @@
-import Form from "../TasksPage/Form";
-import Tasks from "../TasksPage/TaskList";
-import Buttons from "../TasksPage/Buttons";
+import Form from "../TasksList/Form";
+import Tasks from "../TasksList/TaskList";
+import Buttons from "../TasksList/Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import { Main } from "../styled";
-import Search from "../TasksPage/Search";
+import Search from "../TasksList/Search";
 import ExampleTasksButton from "./ExampleTasksButton";
 
-function TasksPage() {
+function TasksList() {
   return (
     <Main>
       <Header titleHeader="Lista zadań" />
@@ -26,4 +26,4 @@ function TasksPage() {
   );
 }
 
-export default TasksPage;
+export default TasksList;

@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const SectionClass = styled.section`
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
 `;
 
 export const SectionTitle = styled.h2`

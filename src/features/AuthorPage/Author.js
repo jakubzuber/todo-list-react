@@ -1,6 +1,6 @@
 import Header from "../../common/Header";
 import Section from "../../common/Section";
-import { Main, MainLayout } from "../tasks/styled";
+import { Main, MainLayout } from "../TasksPage/styled";
 
 const AuthorPage = () => (
     <Main>
