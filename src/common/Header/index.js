@@ -1,15 +1,13 @@
-import { Title, Container } from "./styled"
+import { Title } from "./styled"
 
 const Header = ({ titleHeader }) => {
   
   return (
-    <Container>
       <Title>
         <h1>
           {titleHeader}
         </h1>
       </Title>
-    </Container>
   )
 };
 

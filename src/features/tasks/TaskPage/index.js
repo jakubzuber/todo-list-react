@@ -11,8 +11,9 @@ function TaskPage() {
 
   return (
     <Main>
+
+      <Header titleHeader="Szczegóły zadania" />
       <MainLayout>
-        <Header titleHeader="Szczegóły zadania" />
         <Section title={task ? task.content : "Nie znaleziono zadania 😫"}
           body={
             <><strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}</>
