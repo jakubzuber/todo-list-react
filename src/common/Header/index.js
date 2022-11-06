@@ -8,7 +8,6 @@ const Header = ({ titleHeader }) => {
         <h1>
           {titleHeader}
         </h1>
-        
       </Title>
     </Container>
   )

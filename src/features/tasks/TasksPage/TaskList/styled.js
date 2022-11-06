@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components"
 
 export const Task = styled.li`
@@ -42,4 +43,17 @@ export const TaskText = styled.span`
     ${({done}) => done && css`
         text-decoration: line-through;
     `}
+`;
+
+export const NavLink = styled(Link)`
+    text-decoration: none;
+
+    &:visited{
+        color: teal;
+    }
+
+    &:hover{
+        color: teal;
+        transition: 0.5s;
+    }
 `;
