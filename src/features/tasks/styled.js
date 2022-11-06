@@ -30,7 +30,7 @@ export const Button = styled.button`
     padding: 5px;
 
     &:hover {
-        color: rgb(1, 159, 159);
+        color: rgba(0,128,128,0.5);
         transition: 1s;
         cursor: pointer;
     }

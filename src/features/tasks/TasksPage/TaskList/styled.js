@@ -45,15 +45,12 @@ export const TaskText = styled.span`
     `}
 `;
 
-export const NavLink = styled(Link)`
+export const TaskLink = styled(Link)`
     text-decoration: none;
-
-    &:visited{
-        color: teal;
-    }
+    color: teal;
 
     &:hover{
-        color: teal;
-        transition: 0.5s;
+    color: rgba(0,128,128,0.5);
+    transition: 0.5s;
     }
 `;
