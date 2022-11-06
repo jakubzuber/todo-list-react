@@ -1,8 +1,9 @@
-import Section from "../../../common/Section";
-import Header from "../../../common/Header";
 import { useParams } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { getTaskById } from "../tasksSlice"
+
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
 import { Main, MainLayout } from "../styled";
 
 function TaskPage() {
@@ -11,15 +12,16 @@ function TaskPage() {
 
   return (
     <Main>
-
       <Header titleHeader="Szczegóły zadania" />
-      <MainLayout>
-        <Section title={task ? task.content : "Nie znaleziono zadania 😫"}
-          body={
+      <Section title={task ? task.content : "Nie znaleziono zadania 😫"}
+        body={
+          task && (
+          <MainLayout>
             <><strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}</>
-          }
-        />
-      </MainLayout>
+          </MainLayout>
+          )
+        }
+      />
     </Main>
   );
 }

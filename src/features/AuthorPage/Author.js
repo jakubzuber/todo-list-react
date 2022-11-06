@@ -8,9 +8,7 @@ const AuthorPage = () => (
         <Section title="Jakub Zuber"
             body={
                 <MainLayout>
-                    I am from Poland, living in small village near Bielsko-Biała city. I graduated
-                    Economic University in Katowice with degree of engineer of Logistics in 2022. Now I am looking for a new job opportunities
-                    as a Junior Forntend Developer.
+                    <p>Cześć! Dzięki że zajrzałeś na moją stronę</p>
                 </MainLayout>
             }
         />

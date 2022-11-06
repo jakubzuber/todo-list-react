@@ -6,7 +6,7 @@ export const StyledNavList = styled.ul`
     padding: 10px;
     margin: 20px 0px;
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content max-content max-content;
     justify-content: center;
     list-style-type: none;
 `;
