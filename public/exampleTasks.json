@@ -1,11 +1,11 @@
 [
     {
-        "content": "Nauczyć się Sagi",
+        "content": "Zrobić zakupy",
         "done": false,
         "id": 1
     },
     {
-        "content": "Zrobić kolację ",
+        "content": "Posprzątać w domu",
         "done": false,
         "id": 2
     }
