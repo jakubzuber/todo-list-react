@@ -1,7 +1,13 @@
 import styled from "styled-components";
+import Modal from "react-modal";
 
-export const ModalTitel = styled.h1`
-    max-width: 100%;;
+export const ModalForm = styled(Modal)`
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 18%;
+    background-color: white;
+    padding: 30px;
+    border: 3px solid teal;
     text-align: center;
 `;
 
@@ -10,23 +16,12 @@ export const ModalText = styled.p`
 `;
 
 export const ModalButton = styled.button`
-    margin-left: 10px;
     background-color: teal;
+    margin: 10px;
     color: white;
     border-radius: 5px;
     font-size: 20px;
 `;
-
-export const ModalStyle = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-    },
-};
 
 export const ModalButtonsGrid = styled.div`
     display: grid;

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import Modal from "react-modal";
-import { Button } from "../../styled";
 import { fetchExapleTasks } from "../../tasksSlice";
-import { ModalButton, ModalTitel, ModalStyle, ModalText, ModalButtonsGrid } from "./styled";
+import { Button } from "../../styled";
+import { ModalButton, ModalText, ModalButtonsGrid, ModalForm } from "./styled";
 
 const ExampleTasksButton = () => {
     const dispatch = useDispatch();
@@ -32,12 +31,11 @@ const ExampleTasksButton = () => {
     return (
         <>
             <Button onClick={openModal}>{loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}</Button>
-            <Modal
+            <ModalForm
                 isOpen={modalIsOpen}
-                style={ModalStyle}
             >
-                <ModalTitel>Uwaga!</ModalTitel>
-                <ModalText>Ta czynność spowoduje usunięcie wszystich obecnych zadań i zastąpienie ich przykładowaymi. Czy napewno chcesz kontynuować?</ModalText>
+                <h1>Uwaga!</h1>
+                <ModalText>Ta czynność spowoduje usunięcie wszystich obecnych zadań i zastąpienie ich przykładowaymi.<br /> Czy napewno chcesz kontynuować?</ModalText>
                 <ModalButtonsGrid>
                     <ModalButton
                         onClick={loadingTasks}
@@ -47,18 +45,9 @@ const ExampleTasksButton = () => {
                     </ModalButton>
                     <ModalButton onClick={closeModal}>Nie</ModalButton>
                 </ModalButtonsGrid>
-            </Modal>
+            </ModalForm>
         </>
     )
 }
 
 export default ExampleTasksButton;
-
-
-
-/*<Button 
-onClick={() => loadingTasks()}
-
->
-   
-</Button>  */
