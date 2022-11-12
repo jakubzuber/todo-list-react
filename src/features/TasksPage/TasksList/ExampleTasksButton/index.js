@@ -1,30 +1,64 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import Modal from "react-modal";
 import { Button } from "../../styled";
 import { fetchExapleTasks } from "../../tasksSlice";
+import { ModalButton, ModalTitel, ModalStyle, ModalText, ModalButtonsGrid } from "./styled";
 
 const ExampleTasksButton = () => {
     const dispatch = useDispatch();
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    const openModal = () => {
+        setIsOpen(true);
+    }
+
+    const closeModal = () => {
+        setIsOpen(false);
+    }
 
     const loadingTasks = () => {
-        setLoading(true)
+        setIsOpen(false);
+        setLoading(true);
 
         setTimeout(() => {
             dispatch(fetchExapleTasks());
             setLoading(false)
 
-        }, 2000)
+        }, 1500)
     };
 
     return (
-            <Button 
-            onClick={() => loadingTasks()}
-            disabled={loading}
+        <>
+            <Button onClick={openModal}>{loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}</Button>
+            <Modal
+                isOpen={modalIsOpen}
+                style={ModalStyle}
             >
-               {loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
-            </Button>  
+                <ModalTitel>Uwaga!</ModalTitel>
+                <ModalText>Ta czynność spowoduje usunięcie wszystich obecnych zadań i zastąpienie ich przykładowaymi. Czy napewno chcesz kontynuować?</ModalText>
+                <ModalButtonsGrid>
+                    <ModalButton
+                        onClick={loadingTasks}
+                        disabled={loading}
+                    >
+                        Tak
+                    </ModalButton>
+                    <ModalButton onClick={closeModal}>Nie</ModalButton>
+                </ModalButtonsGrid>
+            </Modal>
+        </>
     )
 }
 
-export default ExampleTasksButton;  
+export default ExampleTasksButton;
+
+
+
+/*<Button 
+onClick={() => loadingTasks()}
+
+>
+   
+</Button>  */
