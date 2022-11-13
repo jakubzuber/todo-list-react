@@ -17,8 +17,8 @@ Simple to do list that help with managing tasks (add, delete, toggle done/undone
 Project was created with:
 
 HTML
-CSS (BEM, grid, media queries)
-JavaScript (React)
+CSS (Bem, Grid, Media query)
+React (Redux, Router, Styled Components, Hooks)
 
 
 # Getting Started with Create React App
