@@ -1,24 +1,16 @@
-import { useHistory, useLocation } from "react-router-dom";
+import { QueryParamName, useQueryParameter, useReplaceQueryParameter } from "../searchQueryParamName";
 import { Input, InputAndTasks } from "../../styled";
-import { QueryParamName } from "../searchQueryParamName";
 import { Form } from "./styled"
 
-
 const Search = () => {
-    const location = useLocation();
-    const history = useHistory();
-    const query = (new URLSearchParams(location.search)).get(QueryParamName);
-
+    const query = useQueryParameter(QueryParamName);
+    const replaceQueryParameter = useReplaceQueryParameter();
 
     const onInputChange = ({ target }) => {
-        const searchParams = new URLSearchParams(location.search)
-
-        if (target.value.trim() === "") {
-            searchParams.delete(QueryParamName);
-        } else {
-            searchParams.set(QueryParamName, target.value);
-        }
-        history.push(`${location.pathname}?${searchParams.toString()}`)
+        replaceQueryParameter({
+            key: QueryParamName,
+            value: target.value.trim() !== "" ? target.value : undefined,
+        });
     };
 
     return (
