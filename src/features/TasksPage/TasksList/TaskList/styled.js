@@ -54,3 +54,8 @@ export const TaskLink = styled(Link)`
     transition: 0.5s;
     }
 `;
+
+export const SiteLimit = styled.div`
+    max-height: 450px;
+    overflow-y: scroll;
+`;

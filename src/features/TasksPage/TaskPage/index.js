@@ -4,7 +4,7 @@ import { getTaskById } from "../tasksSlice"
 
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
-import { Main, MainLayout } from "../styled";
+import { Main, InputAndTasks } from "../styled";
 
 function TaskPage() {
   const { id } = useParams();
@@ -16,9 +16,9 @@ function TaskPage() {
       <Section title={task ? task.content : "Nie znaleziono zadania 😫"}
         body={
           task && (
-          <MainLayout>
+          <InputAndTasks>
             <><strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}</>
-          </MainLayout>
+          </InputAndTasks>
           )
         }
       />

@@ -1,15 +1,15 @@
 import Header from "../../common/Header";
 import Section from "../../common/Section";
-import { Main, MainLayout } from "../TasksPage/styled";
+import { Main, InputAndTasks } from "../TasksPage/styled";
 
 const AuthorPage = () => (
     <Main>
         <Header titleHeader="O autorze" />
         <Section title="Jakub Zuber"
             body={
-                <MainLayout>
+                <InputAndTasks>
                     <p>Cześć! Dzięki że zajrzałeś na moją stronę</p>
-                </MainLayout>
+                </InputAndTasks>
             }
         />
     </Main>

@@ -41,7 +41,7 @@ export const Button = styled.button`
     }
 `;
 
-export const MainLayout = styled.div`
+export const InputAndTasks = styled.div`
     background-color: white;
     margin: 2px 20px 0px 20px;
     padding: 10px;

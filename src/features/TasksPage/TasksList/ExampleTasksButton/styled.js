@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Modal from "react-modal";
 
 export const ModalForm = styled(Modal)`
-    max-width: 70%;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 18%;
     background-color: white;

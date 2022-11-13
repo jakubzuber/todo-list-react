@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom"
-import { Task, ButtonDone, Button, TaskText, TaskLink } from "./styled"
-import { MainLayout } from "../../styled";
+import { Task, ButtonDone, Button, TaskText, TaskLink, SiteLimit } from "./styled"
+import { InputAndTasks } from "../../styled";
 import { selectHideDone, toggleTaskDone, removeTask, selectTasksByQuery } from "../../tasksSlice";
 
 const TaskList = () => {
@@ -14,8 +14,8 @@ const TaskList = () => {
     const dispatch = useDispatch();
 
     return (
-        <MainLayout>
-            <>
+        <InputAndTasks>
+            <SiteLimit>
                 {tasks.map(task => (
                     <Task key={task.id}
                         hide={hideDone && task.done}>
@@ -34,8 +34,8 @@ const TaskList = () => {
                         </Button>
                     </Task>
                 ))}
-            </>
-        </MainLayout>
+            </SiteLimit>
+        </InputAndTasks>
     )
 };
 

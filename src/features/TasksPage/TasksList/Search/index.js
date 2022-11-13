@@ -1,5 +1,5 @@
 import { useHistory, useLocation } from "react-router-dom";
-import { Input, MainLayout } from "../../styled";
+import { Input, InputAndTasks } from "../../styled";
 import { Form } from "./styled"
 import lookFor from "./searchQueryParamName";
 
@@ -21,7 +21,7 @@ const Search = () => {
     };
 
     return (
-        <MainLayout>
+        <InputAndTasks>
             <Form>
                 <Input
                     placeholder="Wpisz zadanie"
@@ -29,7 +29,7 @@ const Search = () => {
                     onChange={onInputChange}
                 />
             </Form>
-        </MainLayout>
+        </InputAndTasks>
     )
 }
 
