@@ -30,7 +30,12 @@ const ExampleTasksButton = () => {
 
     return (
         <>
-            <Button onClick={openModal}>{loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}</Button>
+            <Button
+                onClick={openModal}
+                disabled={loading}
+            >
+                {loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
+            </Button>
             <ModalForm
                 isOpen={modalIsOpen}
             >
@@ -39,7 +44,6 @@ const ExampleTasksButton = () => {
                 <ModalButtonsGrid>
                     <ModalButton
                         onClick={loadingTasks}
-                        disabled={loading}
                     >
                         Tak
                     </ModalButton>

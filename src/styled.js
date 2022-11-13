@@ -15,7 +15,7 @@ export const StyledNavListItem = styled.li`
     margin: 10px;
     transition: 0.5s;
     &:hover{
-        transform: scale(1.40);
+        transform: scale(1.10);
     }
 `;
 

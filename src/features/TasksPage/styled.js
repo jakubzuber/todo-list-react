@@ -28,6 +28,7 @@ export const Button = styled.button`
     color: teal;
     font-size: 15px;
     padding: 5px;
+    text-align: right;
 
     &:hover {
         color: rgba(0,128,128,0.5);
@@ -38,6 +39,10 @@ export const Button = styled.button`
     &:disabled {
         color: gray;
         cursor: not-allowed;
+    }
+
+    @media (max-width: 767px) {
+        text-align: center;
     }
 `;
 

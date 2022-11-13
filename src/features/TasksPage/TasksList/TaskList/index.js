@@ -7,9 +7,7 @@ import { selectHideDone, toggleTaskDone, removeTask, selectTasksByQuery } from "
 const TaskList = () => {
     const location = useLocation();
     const query = (new URLSearchParams(location.search)).get("szukaj");
-
     const tasks = useSelector(state => selectTasksByQuery(state, query));
-
     const hideDone = useSelector(selectHideDone);
     const dispatch = useDispatch();
 
