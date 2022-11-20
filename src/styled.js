@@ -2,9 +2,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledNavList = styled.ul`
+    font-family: 'Lato', sans-serif;
     background-color: teal;
     padding: 10px;
-    margin: 20px 0px;
+    margin: 0px;
     display: grid;
     grid-template-columns: max-content max-content max-content;
     justify-content: center;
