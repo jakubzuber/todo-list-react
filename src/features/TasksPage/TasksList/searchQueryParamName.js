@@ -18,4 +18,4 @@ export const useReplaceQueryParameter = () => {
     };
 };
 
-export const QueryParamName = "szukaj"
+export const QueryParamName = "szukaj";

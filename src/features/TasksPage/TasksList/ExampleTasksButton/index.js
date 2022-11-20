@@ -20,12 +20,8 @@ const ExampleTasksButton = () => {
     const loadingTasks = () => {
         setIsOpen(false);
         setLoading(true);
-
-        setTimeout(() => {
-            dispatch(fetchExapleTasks());
-            setLoading(false)
-
-        }, 1500)
+        dispatch(fetchExapleTasks());
+        setLoading(false)
     };
 
     return (
