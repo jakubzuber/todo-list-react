@@ -5,11 +5,11 @@ import { fetchExapleTasks, selectTasks, setTasks, fetchExampleTasksError } from 
 
 function* fetchExampleTasksHandler() {
     try {
-        yield delay(1500)
+        yield delay(1500);
         const exampleTasks = yield call(getExampleTasks);
         yield put(setTasks(exampleTasks))
     } catch(error) {
-        yield put(fetchExampleTasksError)
+        yield put(fetchExampleTasksError());
         yield call(alert, "coś poszło nie tak :(")
     }
 }
