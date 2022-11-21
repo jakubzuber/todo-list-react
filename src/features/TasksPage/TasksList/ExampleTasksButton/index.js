@@ -22,8 +22,6 @@ const ExampleTasksButton = () => {
         dispatch(fetchExapleTasks());
     };
 
-
-
     return (
         <>
             <Button
